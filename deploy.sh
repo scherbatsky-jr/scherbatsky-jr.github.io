@@ -7,8 +7,6 @@ yarn run build
 
 cd dist
 
-git init
-git checkout master
 git add -A
 git commit -m 'deploy'
 
