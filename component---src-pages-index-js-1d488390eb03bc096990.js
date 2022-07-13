@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkscherbatsky=self.webpackChunkscherbatsky||[]).push([[678],{6558:function(e,n,s){s.r(n);var t=s(7294);n.default=function(){return t.createElement("main",null,"Hello my name is sunil and this is great")}}}]);
+//# sourceMappingURL=component---src-pages-index-js-1d488390eb03bc096990.js.map
