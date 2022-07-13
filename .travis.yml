@@ -1,17 +1,11 @@
 language: node_js
+before_script:
+  - npm install -g gatsby-cli
 node_js:
-  - lts/*
-install:
-  - yarn ci
-script:
-  - yarn run build
+  - "10"
 deploy:
-  provider: pages
+  provider: script
+  script: cd docs/ && yarn install && yarn run deploy
   skip_cleanup: true
-  local_dir: dist
-  # A token generated on GitHub allowing Travis to push code on you repository.
-  # Set in the Travis settings page of your repository, as a secure variable.
-  github_token: $GITHUB_TOKEN
-  keep_history: true
   on:
     branch: master

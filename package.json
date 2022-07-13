@@ -1,20 +1,29 @@
 {
-  "name": "scherbatsky-jr",
+  "name": "scherbatsky",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "scherbatsky",
+  "author": "sunil",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "deploy": "sh deploy.sh",
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "deploy": "gatsby build --prefix-paths && master -d public -r https://$GITHUB_TOKEN@github.com/lirantal/dockly.git",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "gatsby": "^4.18.1",
+    "gatsby-plugin-manifest": "^4.18.1",
+    "gatsby-plugin-sass": "^5.18.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.53.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9",
-    "vue-tsc": "^0.34.7"
+    "gh-pages": "^4.0.0"
   }
 }
