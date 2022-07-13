@@ -1,11 +1,9 @@
 import * as React from "react"
 
-const IndexPage = () => {
-  return (
-    <main>
-      Work in Progress.......
-    </main>
-  )
-}
+import Layout from "../components/layout"
+
+const IndexPage = () => (
+  <Layout />
+)
 
 export default IndexPage

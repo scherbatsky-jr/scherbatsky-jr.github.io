@@ -1,0 +1,13 @@
+.sidebar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.profilePhoto {
+  background-color: black;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
