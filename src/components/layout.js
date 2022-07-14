@@ -1,7 +1,8 @@
 import * as React from "react"
 
-import Sidebar from "./sidebar"
 import Content from "./content"
+import Header from "./header"
+import Sidebar from "./sidebar"
 
 import * as layoutStyles from "../assets/css/components/layout.module.css"
 
@@ -9,7 +10,8 @@ const Layout = () => {
   return (
     <>
       <div className={layoutStyles.layout}>
-        <Sidebar />
+        <Header />
+        <Sidebar className={layoutStyles.sidebar} />
         <Content />
       </div>
     </>

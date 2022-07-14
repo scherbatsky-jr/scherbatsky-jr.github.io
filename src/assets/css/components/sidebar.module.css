@@ -3,7 +3,7 @@
   background-color: #404040;
   border-radius: 1rem 0 0 1rem;
   color: white;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 2rem;
 }
@@ -34,4 +34,10 @@
 .icon {
   cursor: pointer;
   font-size: 1.5rem
+}
+
+@media (min-width: 576px) {
+  .sidebar {
+    display: flex;
+  }
 }

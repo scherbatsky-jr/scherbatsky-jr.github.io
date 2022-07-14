@@ -2,6 +2,12 @@
   background-color: black;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: 1.5fr 6fr;
+  grid-template-rows: auto 1fr;
   height: 100vh;
+}
+
+@media (min-width: 576px) {
+  .layout {
+    grid-template-columns: 1.5fr 6fr;
+  }
 }

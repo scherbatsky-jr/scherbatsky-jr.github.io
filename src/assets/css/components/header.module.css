@@ -1,0 +1,14 @@
+.header {
+  background-color: #404040;
+  border-radius: 1rem;
+  display: flex;
+  grid-column-gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+@media (min-width: 576px) {
+  .header {
+    display: none;
+  }
+}
