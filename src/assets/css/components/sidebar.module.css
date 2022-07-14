@@ -3,20 +3,21 @@
   background-color: #404040;
   border-radius: 1rem 0 0 1rem;
   color: white;
-  display: none;
+  display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .profilePhoto {
   background-color: black;
   border-radius: 50%;
-  height: 8rem;
+  height: 2rem;
   margin-bottom: 1rem;
-  width: 8rem;
+  width: 2rem;
 }
 
 .name {
+  display: none;
   font-size: 1.75rem;
   font-weight: 800;
   text-align: center;
@@ -25,9 +26,7 @@
 .icons {
   border-bottom: 1px solid white;
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 1rem 0;
+  grid-gap: 1.5rem;
   padding-bottom: 2rem;
 }
 
@@ -38,6 +37,21 @@
 
 @media (min-width: 576px) {
   .sidebar {
-    display: flex;
+    padding: 2rem;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 1rem 0;
+  }
+
+  .name {
+    display: block;
+  }
+
+  .profilePhoto {
+    height: 8rem;
+    width: 8rem;
   }
 }

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Icon } from '@iconify/react';
 
 import * as optionStyles from "../assets/css/components/sidebarOption.module.css"
 
@@ -11,7 +12,8 @@ const SidebarOption = (props) => {
         className={optionStyles.sidebarOption}
         href={option.routeName}
       >
-        {option.label}
+        <Icon className={optionStyles.icon} icon={option.icon} />
+        <span className={optionStyles.label}>{option.label}</span>
       </a>
     </>
   )

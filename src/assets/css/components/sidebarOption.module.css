@@ -1,10 +1,11 @@
 .sidebarOption {
   color: white;
   cursor: pointer;
+  display: flex;
   font-size: 1.5rem;
   font-weight: 800;
+  justify-content: center;
   padding: 0.5rem 0;
-  text-align: center;
   text-decoration: none;
   width: 100%;
 }
@@ -12,4 +13,23 @@
 .sidebarOption:hover {
   background-color: yellow;
   color: black;
+}
+
+.icon {
+  display: block;
+}
+
+.label {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .icon {
+    display: none;
+  }
+
+  .label {
+    display: block;
+    text-align: center;
+  }
 }
