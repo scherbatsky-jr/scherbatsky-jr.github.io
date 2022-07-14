@@ -1,4 +1,7 @@
 .layout {
+  background-color: black;
+  border-radius: 1rem;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1.5fr 6fr;
+  height: 100vh;
 }

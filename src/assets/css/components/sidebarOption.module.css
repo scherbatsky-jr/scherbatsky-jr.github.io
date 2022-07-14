@@ -1,0 +1,15 @@
+.sidebarOption {
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.sidebarOption:hover {
+  background-color: yellow;
+  color: black;
+}
