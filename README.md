@@ -1,4 +1,4 @@
-# Sunil one-page site (Vite + Vanilla)
+# Personal Site
 
 ## Run locally
 ```bash
@@ -11,8 +11,3 @@ npm run dev
 npm run build
 npm run preview
 ```
-
-## Update profile links
-Open `src/main.js` and replace:
-- `https://github.com/<your-username>`
-- `https://www.linkedin.com/in/<your-handle>/`
