@@ -1,22 +1,5 @@
 import './styles.css'
 
-/**
- * Update these with your real profiles.
- * (Your resume had icons/labels but not the full URLs.)
- */
-const LINKS = {
-  github: 'https://github.com/scherbatsky-jr',
-  linkedin: 'https://www.linkedin.com/in/scherbatsky-jr/',
-}
-
-function setLink(id, href) {
-  const el = document.getElementById(id)
-  if (el) el.href = href
-}
-
-setLink('githubLink', LINKS.github)
-setLink('linkedinLink', LINKS.linkedin)
-
 const yearEl = document.getElementById('year')
 if (yearEl) yearEl.textContent = String(new Date().getFullYear())
 
@@ -39,18 +22,42 @@ const mobileNav = document.getElementById('mobileNav')
 function closeMenu() {
   mobileNav.hidden = true
   menuBtn.setAttribute('aria-expanded', 'false')
+  menuBtn.focus()
+}
+
+function openMenu() {
+  mobileNav.hidden = false
+  menuBtn.setAttribute('aria-expanded', 'true')
+  const firstLink = mobileNav.querySelector('a')
+  if (firstLink) firstLink.focus()
 }
 
 menuBtn.addEventListener('click', () => {
-  const open = mobileNav.hidden === false
-  if (open) closeMenu()
-  else {
-    mobileNav.hidden = false
-    menuBtn.setAttribute('aria-expanded', 'true')
-  }
+  if (mobileNav.hidden === false) closeMenu()
+  else openMenu()
 })
 
 mobileNav.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu))
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !mobileNav.hidden) closeMenu()
+})
+
+// Trap focus within mobile nav when open
+mobileNav.addEventListener('keydown', (e) => {
+  if (e.key !== 'Tab') return
+  const focusable = mobileNav.querySelectorAll('a')
+  const first = focusable[0]
+  const last = focusable[focusable.length - 1]
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault()
+    last.focus()
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault()
+    first.focus()
+  }
+})
 
 // Typewriter headline (loop)
 const typeEl = document.getElementById('headlineType')
@@ -66,12 +73,9 @@ if (typeEl && !prefersReducedMotion) {
   const HOLD_FULL_MS = 1200
   const HOLD_EMPTY_MS = 350
 
-  let i = 0
+  let i = 1
   let direction = 'type' // 'type' | 'erase'
   let timer
-
-  // Never erase below first character; keep at least 1 char visible to avoid collapse
-  i = 1
   typeEl.textContent = text.slice(0, 1)
 
   const tick = () => {
@@ -112,36 +116,4 @@ if (typeEl && !prefersReducedMotion) {
   window.addEventListener('beforeunload', () => {
     if (timer) window.clearTimeout(timer)
   })
-}
-
-// Tiny toast (no deps)
-let toastTimer
-function toast(msg) {
-  clearTimeout(toastTimer)
-  let el = document.getElementById('toast')
-  if (!el) {
-    el = document.createElement('div')
-    el.id = 'toast'
-    Object.assign(el.style, {
-      position: 'fixed',
-      left: '50%',
-      bottom: '18px',
-      transform: 'translateX(-50%)',
-      padding: '10px 12px',
-      borderRadius: '14px',
-      border: '1px solid rgba(255,255,255,.14)',
-      background: 'rgba(11,12,16,.72)',
-      backdropFilter: 'blur(14px)',
-      boxShadow: '0 18px 50px rgba(0,0,0,.55)',
-      color: 'rgba(233,236,241,.92)',
-      fontSize: '13px',
-      zIndex: '1000',
-      opacity: '0',
-      transition: 'opacity .2s ease',
-    })
-    document.body.appendChild(el)
-  }
-  el.textContent = msg
-  el.style.opacity = '1'
-  toastTimer = setTimeout(() => (el.style.opacity = '0'), 1800)
 }

@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunil Prajapati</title>
     <meta name="description" content="Sunil Prajapati — Software Engineer (Full‑Stack + ML). Projects, experience, and contact." />
+    <meta name="theme-color" content="#0b0c10" />
+    <meta property="og:title" content="Sunil Prajapati — Software Engineer" />
+    <meta property="og:description" content="Full‑Stack + ML engineer. Projects, experience, and contact." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /></noscript>
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
     <div class="bg-noise" aria-hidden="true"></div>
 
     <header class="topbar">
@@ -29,30 +37,30 @@
       </button>
     </header>
 
-    <aside class="social-float" aria-label="Social links">
+    <nav class="social-float" aria-label="Social links">
       <a class="social-btn" href="mailto:sunilpzpt@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
         </svg>
       </a>
-      <a class="social-btn" href="#" id="linkedinLink" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+      <a class="social-btn" href="https://www.linkedin.com/in/scherbatsky-jr/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path d="M6.94 6.5A2.19 2.19 0 1 1 6.94 2.12a2.19 2.19 0 0 1 0 4.38ZM3.5 21V8.98h6.9V21H3.5Zm8.8 0V8.98h6.62v1.64h.09c.92-1.55 2.24-2.03 3.86-2.03 4.12 0 4.88 2.71 4.88 6.24V21h-6.9v-5.18c0-1.23-.02-2.81-1.71-2.81s-1.97 1.34-1.97 2.72V21h-6.87Z"/>
         </svg>
       </a>
-      <a class="social-btn" href="#" id="githubLink" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+      <a class="social-btn" href="https://github.com/scherbatsky-jr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path d="M12 .5A12 12 0 0 0 8.2 24c.6.1.8-.26.8-.58v-2.1c-3.26.71-3.95-1.4-3.95-1.4-.54-1.36-1.32-1.73-1.32-1.73-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.58-2.6-.3-5.33-1.3-5.33-5.78 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.52.12-3.17 0 0 .99-.32 3.24 1.2.94-.26 1.95-.39 2.95-.39s2.01.13 2.95.39c2.25-1.52 3.24-1.2 3.24-1.2.65 1.65.24 2.87.12 3.17.76.82 1.22 1.87 1.22 3.15 0 4.5-2.74 5.48-5.35 5.77.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.81.58A12 12 0 0 0 12 .5Z"/>
         </svg>
       </a>
-    </aside>
+    </nav>
 
-    <div class="mobile-nav" id="mobileNav" hidden>
+    <nav class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation menu" hidden>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
-    </div>
+    </nav>
 
     <main id="top" class="container">
       <!-- HERO -->
@@ -99,8 +107,8 @@
             <div class="t-line"><span class="t-prompt">sunil@site</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> cat what-to-expect.md</div>
             <div class="t-out">
               • Full-stack applications with scalable backend services<br />
-              • Practical devops solution for global deployments<br />
-              • Swift Integration with ML/AI products and tools<br />
+              • Practical DevOps solutions for global deployments<br />
+              • Swift integration with ML/AI products and tools<br />
               • Clear communication and comprehensive documentation
             </div>
 
@@ -124,7 +132,10 @@
           <article class="t-item card reveal">
             <div class="t-row">
               <div class="t-logo">
-                <img src="/logos/ait-ai-center.png" alt="AIT AI Center logo" loading="lazy" />
+                <picture>
+                  <source srcset="/logos/ait-ai-center.webp" type="image/webp" />
+                  <img src="/logos/ait-ai-center.png" alt="AIT AI Center logo" loading="lazy" width="84" height="84" />
+                </picture>
               </div>
               <div class="t-content">
                 <div class="t-top">
@@ -141,7 +152,10 @@
           <article class="t-item card reveal">
             <div class="t-row">
               <div class="t-logo">
-                <img src="/logos/ait.png" alt="Asian Institute of Technology logo" loading="lazy" />
+                <picture>
+                  <source srcset="/logos/ait.webp" type="image/webp" />
+                  <img src="/logos/ait.png" alt="Asian Institute of Technology logo" loading="lazy" width="84" height="84" />
+                </picture>
               </div>
               <div class="t-content">
                 <div class="t-top">
@@ -158,7 +172,7 @@
           <article class="t-item card reveal">
             <div class="t-row">
               <div class="t-logo">
-                <img src="/logos/dzango.png" alt="EightBit (Dzango Technologies) logo" loading="lazy" />
+                <img src="/logos/dzango.png" alt="EightBit (Dzango Technologies) logo" loading="lazy" width="84" height="84" />
               </div>
               <div class="t-content">
                 <div class="t-top">
@@ -175,7 +189,7 @@
           <article class="t-item card reveal">
             <div class="t-row">
               <div class="t-logo">
-                <img src="/logos/infosys.png" alt="Infosys logo" loading="lazy" />
+                <img src="/logos/infosys.png" alt="Infosys logo" loading="lazy" width="84" height="84" />
               </div>
               <div class="t-content">
                 <div class="t-top">
@@ -247,7 +261,10 @@
         <div class="grid two">
           <div class="card reveal">
             <div class="edu-head">
-              <img class="edu-logo" src="/logos/ait.png" alt="Asian Institute of Technology logo" loading="lazy" />
+              <picture>
+                <source srcset="/logos/ait.webp" type="image/webp" />
+                <img class="edu-logo" src="/logos/ait.png" alt="Asian Institute of Technology logo" loading="lazy" width="84" height="84" />
+              </picture>
               <div>
                 <h3>Asian Institute of Technology</h3>
                 <div class="edu-meta">
@@ -261,7 +278,10 @@
 
           <div class="card reveal">
             <div class="edu-head">
-              <img class="edu-logo" src="/logos/ku.png" alt="Kathmandu University logo" loading="lazy" />
+              <picture>
+                <source srcset="/logos/ku.webp" type="image/webp" />
+                <img class="edu-logo" src="/logos/ku.png" alt="Kathmandu University logo" loading="lazy" width="84" height="84" />
+              </picture>
               <div>
                 <h3>Kathmandu University</h3>
                 <div class="edu-meta">
@@ -276,7 +296,7 @@
       </section>
 
       <footer class="site-footer">
-        <span>© <span id="year"></span> Sunil Prajapati</span>
+        <span>© <span id="year">2026</span> Sunil Prajapati</span>
         <span class="dot">•</span>
         <span class="muted">Built with Vite + Vanilla</span>
       </footer>
